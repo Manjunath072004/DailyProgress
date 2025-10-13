@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.View"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true">
+
+
+        <!-- Launcher activity -->
+        <activity
+            android:name=".ui.singup.activity_singup"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Other activities -->
+        <activity android:name=".ui.login.activity_login" android:exported="false" />
+        <activity android:name=".ui.home.activity_home" android:exported="false" />
+        <activity android:name=".ui.home.ImagesActivity" />
+        <activity android:name=".ui.home.VideosActivity" />
+        <activity android:name=".ui.home.AudioActivity" />
+        <activity android:name=".ui.home.DocumentsActivity" />
+        <activity android:name=".ui.home.DownloadsActivity" />
+        <activity android:name=".ui.home.AppsActivity" />
+
+    </application>
+
+</manifest>
